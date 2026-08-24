@@ -1,0 +1,12 @@
+{
+    "name": "hatimaru",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently -n front,back -c cyan,green \"npm run dev:front\" \"npm run dev:back\"",
+        "dev:front": "npm --prefix frontend run dev",
+        "dev:back": "cd backend; mvnw spring-boot:run"
+    },
+    "devDependencies": {
+        "concurrently": "^10.0.4"
+    }
+}
